@@ -10,71 +10,39 @@ import javax.persistence.Table;
 public class Client {
     @Id
     @Column(columnDefinition = "serial")
-    private int id_client;
-    private String name;
-    private String lastname;
-    private int CI;
-    private int phone;
+    private int client_id;
+    private String client_name;
+
     public Client(){
         super();
     }
 
-    public Client(int id_client, String name, String lastname, int CI, int phone) {
-        this.id_client = id_client;
-        this.name = name;
-        this.lastname = lastname;
-        this.CI = CI;
-        this.phone = phone;
+    public Client(int client_id, String client_name) {
+        this.client_id = client_id;
+        this.client_name = client_name;
     }
 
-    public int getId_client() {
-        return id_client;
+    public int getClient_id() {
+        return client_id;
     }
 
-    public void setId_client(int id_client) {
-        this.id_client = id_client;
+    public void setClient_id(int client_id) {
+        this.client_id = client_id;
     }
 
-    public String getName() {
-        return name;
+    public String getClient_name() {
+        return client_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public int getCI() {
-        return CI;
-    }
-
-    public void setCI(int CI) {
-        this.CI = CI;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setClient_name(String client_name) {
+        this.client_name = client_name;
     }
 
     @Override
     public String toString() {
         return "Client{" +
-                "id_client=" + id_client +
-                ", name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", CI=" + CI +
-                ", phone=" + phone +
+                "client_id=" + client_id +
+                ", client_name='" + client_name + '\'' +
                 '}';
     }
 }

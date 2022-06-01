@@ -3,35 +3,24 @@ package project.backend.mssales.dto;
 import java.util.Date;
 
 public class SalesDto {
-    public String name;
-    public String lastname;
+    public String client_name;
     public String name_product;
-
     public double price;
     public Date date;
 
-    public SalesDto(String name, String lastname, String name_product, double price, Date date) {
-        this.name = name;
-        this.lastname = lastname;
+    public SalesDto(String client_name, String name_product, double price, Date date) {
+        this.client_name = client_name;
         this.name_product = name_product;
         this.price = price;
         this.date = date;
     }
 
-    public String getName() {
-        return name;
+    public String getClient_name() {
+        return client_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setClient_name(String client_name) {
+        this.client_name = client_name;
     }
 
     public String getName_product() {
@@ -61,8 +50,7 @@ public class SalesDto {
     @Override
     public String toString() {
         return "SalesDto{" +
-                "name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
+                "client_name='" + client_name + '\'' +
                 ", name_product='" + name_product + '\'' +
                 ", price=" + price +
                 ", date=" + date +

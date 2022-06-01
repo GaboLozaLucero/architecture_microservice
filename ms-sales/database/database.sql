@@ -1,43 +1,52 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-05-31 16:58:55.607
+-- Last modification date: 2022-05-31 20:34:50.409
 
 -- tables
 -- Table: client
 CREATE TABLE client (
-                        id_client int NOT NULL AUTO_INCREMENT,
-                        name varchar(50) NOT NULL,
-                        lastname varchar(50) NOT NULL,
-                        CI int NOT NULL,
-                        phone int NOT NULL,
-                        CONSTRAINT client_pk PRIMARY KEY (id_client)
+                        client_id int NOT NULL AUTO_INCREMENT,
+                        client_name varchar(20) NULL,
+                        CONSTRAINT client_pk PRIMARY KEY (client_id)
 );
 
--- Table: product
-CREATE TABLE product (
-                         id_product int NOT NULL AUTO_INCREMENT,
-                         name_product varchar(59) NOT NULL,
-                         quantity int NOT NULL,
-                         price numeric(10,4) NOT NULL,
-                         description varchar(200) NOT NULL,
-                         CONSTRAINT product_pk PRIMARY KEY (id_product)
+-- Table: invoice
+CREATE TABLE invoice (
+                         invoice_id int NOT NULL AUTO_INCREMENT,
+                         product_id int NOT NULL,
+                         client_id int NOT NULL,
+                         date date NULL,
+                         CONSTRAINT invoice_pk PRIMARY KEY (invoice_id)
 );
 
--- Table: sale
-CREATE TABLE sale (
-                      id_sale int NOT NULL AUTO_INCREMENT,
-                      id_product int NOT NULL,
-                      id_client int NOT NULL,
-                      date date NOT NULL,
-                      CONSTRAINT sale_pk PRIMARY KEY (id_sale)
+-- Table: products
+CREATE TABLE products (
+                          product_id int NOT NULL AUTO_INCREMENT,
+                          product_name varchar(20) NULL,
+                          quantity int NULL,
+                          price numeric(10,4) NULL,
+                          description varchar(200) NULL,
+                          provider_id int NOT NULL,
+                          CONSTRAINT product_id PRIMARY KEY (product_id)
+);
+
+-- Table: providers
+CREATE TABLE providers (
+                           provider_id int NOT NULL AUTO_INCREMENT,
+                           provider_name varchar(20) NULL,
+                           CONSTRAINT providers_pk PRIMARY KEY (provider_id)
 );
 
 -- foreign keys
--- Reference: sale_client (table: sale)
-ALTER TABLE sale ADD CONSTRAINT sale_client FOREIGN KEY sale_client (id_client)
-    REFERENCES client (id_client);
+-- Reference: invoice_client (table: invoice)
+ALTER TABLE invoice ADD CONSTRAINT invoice_client FOREIGN KEY invoice_client (client_id)
+    REFERENCES client (client_id);
 
--- Reference: sale_product (table: sale)
-ALTER TABLE sale ADD CONSTRAINT sale_product FOREIGN KEY sale_product (id_product)
-    REFERENCES product (id_product);
+-- Reference: invoice_products (table: invoice)
+ALTER TABLE invoice ADD CONSTRAINT invoice_products FOREIGN KEY invoice_products (product_id)
+    REFERENCES products (product_id);
+
+-- Reference: products_providers (table: products)
+ALTER TABLE products ADD CONSTRAINT products_providers FOREIGN KEY products_providers (provider_id)
+    REFERENCES providers (provider_id);
 
 -- End of file.

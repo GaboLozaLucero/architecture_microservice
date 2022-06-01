@@ -3,40 +3,33 @@ package project.backend.mssales.model;
 import java.util.Date;
 
 public class SalesModel {
-    private int id_sale;
-    private int id_product;
-    private int id_client;
+    private int invoice_id;
+    private int product_id;
+    private int client_id;
     private Date date;
 
-    public SalesModel(int id_sale, int id_product, int id_client, Date date) {
-        this.id_sale = id_sale;
-        this.id_product = id_product;
-        this.id_client = id_client;
-        this.date = date;
+    public int getInvoice_id() {
+        return invoice_id;
     }
 
-    public int getId_sale() {
-        return id_sale;
+    public void setInvoice_id(int invoice_id) {
+        this.invoice_id = invoice_id;
     }
 
-    public void setId_sale(int id_sale) {
-        this.id_sale = id_sale;
+    public int getProduct_id() {
+        return product_id;
     }
 
-    public int getId_product() {
-        return id_product;
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
     }
 
-    public void setId_product(int id_product) {
-        this.id_product = id_product;
+    public int getClient_id() {
+        return client_id;
     }
 
-    public int getId_client() {
-        return id_client;
-    }
-
-    public void setId_client(int id_client) {
-        this.id_client = id_client;
+    public void setClient_id(int client_id) {
+        this.client_id = client_id;
     }
 
     public Date getDate() {
