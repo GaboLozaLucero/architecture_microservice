@@ -8,20 +8,21 @@ POST http://localhost:8080/product
 Content-Type: application/json
 
 {
-  "id_product": 17,
-  "name_product": "Atorvastatina",
-  "price": 85,
+  "product_id": 20,
+  "product_name": "Atorvastatina",
   "quantity": 120,
-  "description": "Sirve para reducir los niveles de trigliricéridos "
+  "price": 85,
+  "description": "Sirve para reducir los niveles de trigliricéridos ",
+  "provider_id": 1
 }
 
 
 ####
-DELETE http://localhost:8080/product/17
+DELETE http://localhost:8080/product/20
 Content-Type: application/json
 
 ####
-GET http://localhost:8080/product/5
+GET http://localhost:8080/product/14
 Content-Type: application/json
 
 
@@ -30,11 +31,12 @@ PUT http://localhost:8080/product
 Content-Type: application/json
 
 {
-  "id_product": 9,
+  "id_product": 14,
   "name_product": "Paracetamol",
   "price": 8.7,
   "quantity": 120,
-  "description": "para aliviar la fiebre y el dolor"
+  "description": "para aliviar la fiebre y el dolor",
+  "provider_id": 2
 }
 
 

@@ -1,0 +1,37 @@
+GET http://localhost:8080/provider
+Content-Type: application/json
+
+
+
+####
+POST http://localhost:8080/provider
+Content-Type: application/json
+
+{
+  "provider_id": 13,
+  "provider_name": "Quimiza ltda"
+
+}
+####
+POST http://localhost:8080/provider
+Content-Type: application/json
+
+{
+  "provider_id": 15,
+  "provider_name": "ADM SAO S.A."
+
+}
+
+
+####
+DELETE http://localhost:8080/provider/1
+Content-Type: application/json
+
+####
+GET http://localhost:8080/provider/5
+Content-Type: application/json
+
+
+
+
+
