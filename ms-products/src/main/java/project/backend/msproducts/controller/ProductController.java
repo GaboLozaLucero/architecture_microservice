@@ -15,7 +15,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    //	OBTENER TODOS LOS PRODUCTOS
+
     @GetMapping
     public List<Product> SearchProducts() {
 

@@ -4,25 +4,39 @@ package project.backend.msproducts.model;
 
 public class ProductModel {
 
-    private String name_product;
+    private int product_id;
+
+    private String product_name;
 
     private int quantity;
     private double price;
     private String description;
 
-    public ProductModel(String name_product, int quantity, double price, String description) {
-        this.name_product = name_product;
+    private int provider_id;
+
+    public ProductModel(int product_id, String product_name, int quantity, double price, String description, int provider_id) {
+        this.product_id = product_id;
+        this.product_name = product_name;
         this.quantity = quantity;
         this.price = price;
         this.description = description;
+        this.provider_id = provider_id;
     }
 
-    public String getName_product() {
-        return name_product;
+    public int getProduct_id() {
+        return product_id;
     }
 
-    public void setName_product(String name_product) {
-        this.name_product = name_product;
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
+    }
+
+    public String getProduct_name() {
+        return product_name;
+    }
+
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
     public int getQuantity() {
@@ -47,6 +61,14 @@ public class ProductModel {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getProvider_id() {
+        return provider_id;
+    }
+
+    public void setProvider_id(int provider_id) {
+        this.provider_id = provider_id;
     }
 
     public ProductModel() {
