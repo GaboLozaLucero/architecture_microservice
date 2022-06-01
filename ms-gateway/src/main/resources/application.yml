@@ -1,0 +1,24 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: ms-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: ms-products
+          uri: lb://MS-PRODUCTS
+          predicates:
+            - Path=/ms-products/**
+          filters:
+            - RewritePath=/ms-products/(?<remaining>.*), /$\{remaining}
+
+        - id: ms-sales
+          uri: lb://MS-SALES
+          predicates:
+            - Path=/ms-sales/**
+          filters:
+             - RewritePath=/ms-sales/(?<remaining>.*), /$\{remaining}
+
+
