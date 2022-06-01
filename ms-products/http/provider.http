@@ -1,10 +1,10 @@
-GET http://localhost:8080/provider
+GET http://localhost:8090/provider
 Content-Type: application/json
 
 
 
 ####
-POST http://localhost:8080/provider
+POST http://localhost:8090/provider
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ Content-Type: application/json
 
 }
 ####
-POST http://localhost:8080/provider
+POST http://localhost:8090/provider
 Content-Type: application/json
 
 {
@@ -24,11 +24,11 @@ Content-Type: application/json
 
 
 ####
-DELETE http://localhost:8080/provider/1
+DELETE http://localhost:8090/provider/15
 Content-Type: application/json
 
 ####
-GET http://localhost:8080/provider/5
+GET http://localhost:8090/provider/5
 Content-Type: application/json
 
 
