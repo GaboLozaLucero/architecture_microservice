@@ -1,2 +1,7 @@
 GET http://localhost:8091/sale
 Content-Type: application/json
+
+
+###Gateway
+GET http://localhost:8093/ms-sales/sale
+Content-Type: application/json

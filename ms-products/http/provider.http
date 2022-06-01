@@ -1,10 +1,8 @@
-GET http://localhost:8090/provider
+GET http://localhost:8092/provider
 Content-Type: application/json
 
-
-
 ####
-POST http://localhost:8090/provider
+POST http://localhost:8092/provider
 Content-Type: application/json
 
 {
@@ -13,7 +11,7 @@ Content-Type: application/json
 
 }
 ####
-POST http://localhost:8090/provider
+POST http://localhost:8092/provider
 Content-Type: application/json
 
 {
@@ -24,12 +22,49 @@ Content-Type: application/json
 
 
 ####
-DELETE http://localhost:8090/provider/15
+DELETE http://localhost:8092/provider/5
 Content-Type: application/json
 
 ####
-GET http://localhost:8090/provider/5
+GET http://localhost:8092/provider/6
 Content-Type: application/json
+
+
+
+
+
+###Gateway
+GET http://localhost:8093/ms-products/provider
+Content-Type: application/json
+
+####
+POST http://localhost:8093/ms-products/provider
+Content-Type: application/json
+
+{
+  "provider_id": 15,
+  "provider_name": "Quimiza ltda"
+
+}
+####
+POST http://localhost:8093/ms-products/provider
+Content-Type: application/json
+
+{
+  "provider_id": 16,
+  "provider_name": "ADM SAO S.A."
+
+}
+
+
+####
+DELETE http://localhost:8093/ms-products/provider/16
+Content-Type: application/json
+
+####
+GET http://localhost:8093/ms-products/provider/9
+Content-Type: application/json
+
 
 
 

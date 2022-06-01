@@ -22,22 +22,50 @@ DELETE http://localhost:8092/product/20
 Content-Type: application/json
 
 ####
-GET http://localhost:8092/product/14
+GET http://localhost:8092/product/50
+Content-Type: application/json
+
+
+
+
+###Gateway
+GET http://localhost:8093/ms-products/product
 Content-Type: application/json
 
 
 ####
-PUT http://localhost:8092/product
+POST http://localhost:8093/ms-products/product
 Content-Type: application/json
 
 {
-  "id_product": 14,
-  "name_product": "Paracetamol",
-  "price": 8.7,
+  "product_id": 14,
+  "product_name": "Atorvastatina",
   "quantity": 120,
-  "description": "para aliviar la fiebre y el dolor",
-  "provider_id": 2
+  "price": 85,
+  "description": "Sirve para reducir los niveles de trigliricéridos ",
+  "provider_id": 1
 }
+
+
+####
+DELETE http://localhost:8093/ms-products/product/14
+Content-Type: application/json
+
+####
+GET http://localhost:8093/ms-products/product/1
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
